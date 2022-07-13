@@ -1,9 +1,6 @@
 import React from 'react'
 import { AiOutlineGithub, AiOutlineInstagram, AiOutlineLinkedin } from 'react-icons/ai'
-import { SiReact, SiTypescript, SiJava } from 'react-icons/si'
 import Header from '../../components/Header'
-import Spline from '@splinetool/react-spline';
-import { Example } from '../../components/Scroll'
 import styles from './styles.module.scss'
 import Banner from '../../components/Banner';
 

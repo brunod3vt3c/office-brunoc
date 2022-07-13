@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import styles from '../../container/Body/styles.module.scss';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import HeaderImg from "../../assets/img/HeaderImg";
 import headerImg from "../../assets/img/svg/header-img.svg";
-// import { ArrowRightCircle } from 'react-bootstrap-icons';
 import Image from 'next/image';
 
 function Banner() {

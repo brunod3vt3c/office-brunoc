@@ -2,8 +2,6 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import React, { Fragment, ReactNode, useState } from 'react'
-import { IconType } from 'react-icons';
-import { AiOutlineGithub, AiOutlineInstagram, AiOutlineLinkedin } from 'react-icons/ai';
 import styles from './styles.module.scss'
 
 // interface MenuProps {
