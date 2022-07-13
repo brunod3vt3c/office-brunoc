@@ -1,0 +1,11 @@
+export { default as Arrow1 } from "./Arrow1";
+export { default as Arrow2 } from "./Arrow2";
+export { default as ContactImg } from "./ContactImg";
+export { default as HeaderImg } from "./HeaderImg";
+export { default as Logo } from "./Logo";
+export { default as Meter1 } from "./Meter1";
+export { default as Meter2 } from "./Meter2";
+export { default as Meter3 } from "./Meter3";
+export { default as NavIcon1 } from "./NavIcon1";
+export { default as NavIcon2 } from "./NavIcon2";
+export { default as NavIcon3 } from "./NavIcon3";

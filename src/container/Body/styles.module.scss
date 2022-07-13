@@ -1,0 +1,144 @@
+.bt-scale {
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  background: #eeee;
+  --tw-scale-x: 10%;
+  --tw-scale-y: 10%;
+  --tw-rotate: 45deg;
+  --tw-skew-x: 10deg;
+  --tw-skew-y: 5deg;
+  --tw-scale-x: 90%;
+  --tw-scale-y: 90%;
+  transition: all .2s ease-in-out;
+  // transform: scale3d(100%, 30%, 30%);
+  &:hover {
+    transform: 
+      // translate(var(--tw-scale-x), var(--tw-scale-y));
+      // rotate(var(--tw-rotate))
+      // skewX(var(--tw-skew-x))
+      // skewY(var(--tw-skew-y))
+      scale3d(120%, 120%, 1000%);
+      border-radius: 8px;
+  }
+}
+
+.typing {
+  width: 13ch;
+  animation: typing 2s steps(13), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  // border-right: 3px solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.sideline{
+  @apply hidden md:block h-[60%] w-[2px] bg-gradient-to-t from-green-400 to-blue-500 mt-6 ml-[45px];
+  animation: sideline 1.5s ease;
+}
+
+@keyframes sideline {
+  from {
+    @apply h-0;
+  }
+
+  to {
+    @apply h-[60%];
+  }
+}
+
+.instaicon {
+  opacity: 0;
+  animation: 1s sideicons 1.1s ease;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    @apply scale-125 cursor-pointer;
+  }
+}
+.linkedinicon {
+  opacity: 0;
+  animation: 1s sideicons 1.3s ease;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    @apply scale-125 cursor-pointer;
+  }
+}
+.githubicon {
+  opacity: 0;
+  animation: 1s sideicons 1.5s ease;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    @apply scale-125 cursor-pointer;
+  }
+}
+
+
+
+@keyframes sideicons {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.icons3d {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(160deg);
+  background: #999;
+  animation: anim 4s linear infinite forwards;
+
+  @keyframes anim {
+    0% {
+      transform: rotateX(-30deg) rotateY(160deg);
+    }
+    25% {
+      transform: rotateX(-30deg) rotateY(130deg);
+    }
+    50% {
+      transform: rotateX(-30deg) rotateY(160deg);
+    }
+    75% {
+      transform: rotateX(-30deg) rotateY(180deg);
+    }
+    100% {
+      transform: rotateX(-30deg) rotateY(160deg);
+    }
+  }
+
+  .iconbase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+  }
+
+  // .progicons {
+  //   transition: transform .5s ease;
+  
+  //   &:hover {
+  //     transform: rotate3d(1, 1, 1, 20deg);
+  //   }
+  // }
+}
