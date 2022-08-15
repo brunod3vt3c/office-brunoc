@@ -7,7 +7,6 @@ import Banner from '../../components/Banner';
 function Body() {
   return (
     <div className="w-full h-screen md:p-10">
-
         <div className="w-full h-full shadow-[0_0px_0_rgb(0,0,0)] hover:shadow-[9px_9px_0px_rgb(0,0,0)] ease-out transition-all flex flex-col z-1 md:border-2 md:border-black md:rounded-2xl bg-[#0E1129]">
         <Header/>
           <div className="flex flex-row w-full h-full">
@@ -20,26 +19,6 @@ function Body() {
               </div>
             </div>
             <Banner/>
-            {/* <div className="flex flex-col items-center justify-center w-full h-full gap-4">
-              <div className={`${styles.icons3d}`}>
-                <div className={`${styles.iconbase}`}>
-                  <SiReact className={`${styles.progicons} text-6xl bg-white`}/>
-                </div>
-                <div className={`${styles.iconstep}`}></div>
-              </div>
-              <div className={`${styles.icons3d}`}>
-                <div className={`${styles.iconbase}`}>
-                  <SiTypescript className={`${styles.progicons} text-6xl bg-white`}/>
-                </div>
-                <div className={`${styles.iconstep}`}></div>
-              </div>
-              <div className={`${styles.icons3d}`}>
-                <div className={`${styles.iconbase}`}>
-                  <SiJava className={`${styles.progicons} text-6xl bg-white`}/>
-                </div>
-                <div className={`${styles.iconstep}`}></div>
-              </div>
-            </div> */}
           </div>
         </div>
       
