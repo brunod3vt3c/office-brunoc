@@ -1,0 +1,4 @@
+.sideline{
+  @apply hidden md:block h-[60%] w-[2px] bg-gradient-to-t from-green-400 to-blue-500 mt-6 ml-[45px];
+  animation: sideline 1.5s ease;
+}

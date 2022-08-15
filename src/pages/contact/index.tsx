@@ -1,54 +1,20 @@
-import React, { useState } from 'react'
-
-type TypeProps = {
-  category: string;
-  value: string;
-}
+import {ContactContent} from "../../components/ContactContent";
+import Header from "../../components/Header";
+import SideBar from "../../components/SideBar";
 
 function Contact() {
-  const formInitialDetails = {
-    name: '',
-    Company: '',
-    email: '',
-    phone: '',
-    message: '',
-  }
-
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('send');
-  const [status, setStatus] = useState({});
-
-  const onFormUpdate = ({category, value}: TypeProps) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value
-    })
-  }
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:3000/contact", { 
-      method: "POST",
-    headers: {
-      "Content-Type": "application/json;charset=utf-8",
-    },
-    body: JSON.stringify(formDetails),
-  });
-  setButtonText("Send");
-  let result = await response.json();
-  setFormDetails(formInitialDetails);
-  if(result.code == 200) {
-    setStatus({ success: true, message: 'Message sent successfully'});
-  } else {
-    setStatus({ success: false, message: 'Something went wrong, please try again later.'});
-  }
-  }
-  
   return (
-    <>
-    </>
+    <div className="w-full h-screen md:p-10">
+        <div className="w-full h-full shadow-[0_0px_0_rgb(0,0,0)] hover:shadow-[9px_9px_0px_rgb(0,0,0)] ease-out transition-all flex flex-col z-1 md:border-2 md:border-black md:rounded-2xl bg-[#0E1129]">
+        <Header/>
+          <div className="flex flex-row w-full h-full">
+            <SideBar/>
+            <ContactContent />
+          </div>
+        </div>
+      
+    </div>
   )
 }
 
-export default Contact
+export default Contact;

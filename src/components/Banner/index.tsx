@@ -10,7 +10,7 @@ function Banner() {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Full Stack Developer", "Mobile Developer" ];
+  const toRotate = [ "Web Developer", "Full Stack", "Mobile Developer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function Banner() {
 
   return (
     <>
-      <div className="flex flex-row items-center w-full ml-6 sm:items-center sm:ml-20">
+      <div className="flex flex-row items-center w-full ml-6 mr-6 sm:items-center sm:ml-20">
         <TrackVisibility>
           {({ isVisible }) =>
             <div className={isVisible ? "animate__animated animate__fadeIn flex flex-col gap-2" : "flex flex-col gap-2 justify-center"}>
@@ -72,10 +72,10 @@ function Banner() {
               </div>
               
                 <div className="ml-20">
-                  <h1 className={`text-3xl sm:text-6xl text-gray-100`}>
+                  <h1 className={`text-3xl sm:text-5xl text-gray-100`}>
                     {`Hi! I'm Bruno`}
                     <br/>
-                    <span className="txt-rotate" data-rotate='[ "Web Developer", "Full Stack Developer", "Mobile Developer" ]'>
+                    <span className="txt-rotate" data-rotate='[ "Web Developer", "Full Stack", "Mobile Developer" ]'>
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>

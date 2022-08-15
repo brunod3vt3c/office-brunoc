@@ -1,0 +1,54 @@
+.sideline{
+  @apply hidden md:block h-[60%] w-[2px] bg-gradient-to-t from-green-400 to-blue-500 mt-6 ml-[45px];
+  animation: sideline 1.5s ease;
+}
+
+@keyframes sideline {
+  from {
+    @apply h-0;
+  }
+
+  to {
+    @apply h-[60%];
+  }
+}
+
+.instaicon {
+  opacity: 0;
+  animation: 1s sideicons 1.1s ease;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    @apply scale-125 cursor-pointer;
+  }
+}
+.linkedinicon {
+  opacity: 0;
+  animation: 1s sideicons 1.3s ease;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    @apply scale-125 cursor-pointer;
+  }
+}
+.githubicon {
+  opacity: 0;
+  animation: 1s sideicons 1.5s ease;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    @apply scale-125 cursor-pointer;
+  }
+}
+
+
+
+@keyframes sideicons {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

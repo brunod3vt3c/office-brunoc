@@ -1,3 +1,38 @@
 .logo {
   color: linear-gradient(255, 255, 255);
 }
+
+.contBtn {
+  position: relative;
+  height: 100%;
+
+  .backBtn {
+    top: 35%;
+    position: absolute;
+    right: 0;
+
+    background: white;
+    &:hover {
+    }
+
+    .contact {
+      top: -2px;
+      position: absolute;
+      right: -2px;
+      
+      background-color: #0E1129;
+      transition: all 0.5s;
+  
+      &::before {
+        content: '';
+        box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.8);
+      }
+    
+      &:hover {
+        // box-shadow: 0 10px 0 rgba(255, 255, 255, 0.8);
+        transform: translateY(-10px);
+        // transform: translateX(-10px);
+      }
+    }
+  }
+}

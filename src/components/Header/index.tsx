@@ -3,6 +3,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import React, { Fragment, ReactNode, useState } from 'react'
 import styles from './styles.module.scss'
+import Contact from '../../pages/contact/index';
 
 // interface MenuProps {
 //   title: string
@@ -14,9 +15,11 @@ interface SocialProps {
   icon: ReactNode
 }
 
+const contact = "../../pages/contact"
+
 const menus = [
-  {title: 'Home', href: '#'},
-  {title: 'Projects', href: '/projects'},
+  {title: 'Home', href: '/'},
+  {title: 'Projects', href: '/repositories'},
   {title: 'About', href: '/about'},
 ]
 
@@ -50,8 +53,15 @@ function Header() {
               </ul>
             </div>
           </div>
-          <div className="hidden pt-4 mr-10 md:block">
-            <button className="p-2 px-4 text-white bg-inherit rounded-2xl border-[#363531] border-2">Contact</button>
+          <div className={`${styles.contBtn} hidden pt-4 mr-10 hover:bg-white md:block`}>
+            <div className={`${styles.backBtn} p-2 px-4 text-white bg-inherit rounded-2xl border-[#363531] border-2`}>
+              Contact
+              <Link href="/contact">
+                <button className={`${styles.contact} p-2 px-4 text-white bg-inherit rounded-2xl border-[#363531] border-2`}>
+                  Contact
+                </button>
+              </Link> 
+            </div>
           </div>
         </div>
 
@@ -71,11 +81,11 @@ function Header() {
                 <div className="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
                   <div className="flex items-center justify-between px-5 pt-4">
                     <div>
-                      <img
+                      {/* <img
                         className="w-auto h-8"
                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                         alt=""
-                      />
+                      /> */}
                     </div>
                     <div className="">
                       <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-500 bg-white rounded-md hover:text-gray-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -84,12 +94,12 @@ function Header() {
                       </Popover.Button>
                     </div>
                   </div>
-                  <div className="px-2 pt-2 pb-3 space-y-1">
+                  <div className="flex flex-col items-center justify-center px-2 pt-2 pb-3 space-y-1">
                     {menus.map((item) => (
                       <a
                         key={item.title}
                         href={item.href}
-                        className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                        className="block px-3 py-2 text-base text-4xl font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
                       >
                         {item.title}
                       </a>
@@ -97,9 +107,11 @@ function Header() {
                   </div>
                   <a
                     href="#"
-                    className="block w-full px-5 py-3 font-medium text-center text-gray-100 bg-indigo-600 hover:text-gray-600 hover:bg-gray-100 hover:ring-indigo-600 ring-2"
+                    className="bottom-0 block w-full px-5 py-3 font-medium text-center text-gray-100 bg-indigo-600 hover:text-gray-600 hover:bg-gray-100 hover:ring-indigo-600 ring-2"
                   >
-                    Contact
+                    <Link href="/../pages/contact">
+                      Contact
+                    </Link>
                   </a>
                 </div>
               </Popover.Panel>
